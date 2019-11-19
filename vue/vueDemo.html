@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="app1">
+			<!-- 		<span :title="message">
+				鼠标悬停查看
+				
+			</span>
+ -->
+			<!-- <div>{{ message }}</div> -->
+			<button type="button" @click="reverseMessage">点击</button>
+			<div>{{messag}</div>
+			
+			<input v-model="message" />
+			<div>{{message}}</div>
+			
+			<!-- <span v-if="isTrue">第一</span>
+			<span v-else>第二</span> -->
+
+			<span v-if="seem">看到了吗</span>
+			<div id="app1">
+				<ol>
+					<li v-for="todo in todos">
+						{{ todo.text }}
+					</li>
+				</ol>
+			</div>
+			<!-- <span v-for="to in tools" style="border: 1px solid red;margin-left: 20px;"  @click="onClick(item)">
+				{{ to.text}}
+			</span> -->
+		</div>
+
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app1',
+			data: {
+				todos: [{
+						text: "学习"
+					},
+					{
+						text: "睡觉"
+					},
+					{
+						text: "打豆豆"
+					},
+				],
+
+				seem: true,
+				// message: '页面加载于 ' + new Date().toLocaleString(),
+				
+				message: '请输入内容！！！！',
+				
+				isTrue: true,
+				arr: [{
+						id: 0,
+						name: '疯狂撒娇了',
+					},
+					{
+						id: 1,
+						name: '看来反馈'
+					}
+				]
+			},
+			methods: {
+				reverseMessage() {
+					this.message = this.message.split('').reverse().join('');
+				}
+			}
+		})
+	</script>
+</html>
